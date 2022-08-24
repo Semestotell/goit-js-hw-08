@@ -17,7 +17,7 @@ function onFormSubmit(evt) {
     evt.preventDefault();
     const savedMessage = localStorage.getItem(STORAGE_KEY);
     if (savedMessage) {
-        refs.textarea.value = savedMessage;
+        console.log(JSON.parse(savedMessage));
     }
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
